@@ -90,3 +90,39 @@ There will be a link to your website.
 
 npm run predeploy
 npm run deploy
+
+* Run the following commands in your Terminal
+git init
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:maxi1kiano/react-tasks-example.git
+git push -u origin main
+
+* Deploying (Static)
+Go to your vite.config.js file. And add your base url to it.
+
+# vite.config
+export default defineConfig({
+  plugins: [react()],
+  base: '/react-tasks-example/'
+})
+
+
+* Run npm run build in your Terminal.
+By default, the build output will be placed at dist. You may deploy this dist folder to any of your preferred platforms.
+
+* Add /dist folder into your repo. By running.
+git add dist -f
+
+git commit -m "Adding dist" in your Terminal.
+git subtree push --prefix dist origin gh-page
+
+# package.json
+{
+  "homepage": "https://maxi1kiano.github.io/react-tasks-example/",
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",    
+  },
+}
