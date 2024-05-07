@@ -63,6 +63,30 @@ git add .
 git commit -m "Primer commit"
 git push origin master
 
+# npm install gh-pages --save-dev
+https://vitejs.dev/guide/static-deploy#github-pages
+
+# deploying a website
 npm install gh-pages --save-dev
 
-https://vitejs.dev/guide/static-deploy#github-pages
+# vite.config
+export default defineConfig({
+  plugins: [react()],
+  base: '/react-tasks-example/'
+})
+
+
+npm run build
+git add dist -f
+git commit -m "Agregar carpeta dist"
+git subtree push --prefix dist origin gh-pages
+
+Visit your repository.
+Go to Settings.
+Scroll down to Pages.
+There will be a link to your website.
+
+# https://maxi1kiano.github.io/react-tasks-example/
+
+npm run predeploy
+npm run deploy
