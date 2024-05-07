@@ -1,0 +1,68 @@
+# vite
+https://vitejs.dev/
+
+Alternativa a create-react-app mucho mas rapida.
+
+# crear un proyecto con vitejs en reemplazo de create-react-app
+npm create vite
+npm install
+npm run dev
+
+# ejecutar en toda la red
+cd /home/ubuntu/Desktop/react/fazt-tasks-vite
+npm run dev -- --host
+
+# npm run dev equivale al 'npm run start' de create-react-app
+# en vite es obligatorio usar las extensiones jsx
+
+http://192.168.0.188:5173/
+
+# ejecutar solo local
+npm run dev
+
+# produccion 
+npm run build
+
+
+# autocompletado reactjs
+# sino existe entonces crearla
+F1 > Preferences: Open User Settings
+Emmet
+Emmet: include languages
+javascript: javascriptreact
+
+# extensions
+# dsznajder
+es7 react
+rfce
+
+# en desarrollo
+React.StrictMode
+
+# tailwindcss framework
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+
+# vs code
+Tailwind CSS IntelliSense
+
+# build
+npm run build
+
+# git
+ssh-keygen 
+cat /home/ubuntu/.ssh/id_rsa.pub
+github > settings > SSH keys > add
+
+git init
+git config --global user.email "mnuniez@gmail.com"
+git config --global user.name "maxi1kiano"
+git remote add origin git@github.com:maxi1kiano/react-tasks-example.git
+
+git add .
+git commit -m "Primer commit"
+git push origin master
+
+npm install gh-pages --save-dev
+
+https://vitejs.dev/guide/static-deploy#github-pages
